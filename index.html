@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tu Tienda de Camisetas</title>
+    <link rel="stylesheet" src="estilos.css">
+    <!-- Agrega las hojas de estilo de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Agrega una fuente personalizada de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<style>
+    /* Estilo personalizado para la barra de navegación con una imagen de fondo */
+.navbar {
+    background: url('img/fondoNav.png') center center fixed; /* Ruta de tu imagen de fondo */
+    border-radius: 5px;
+}
+
+.carousel-dark{
+    border-radius: 5px;
+}
+
+/* Estilo para el contenido de la barra de navegación (color de texto) */
+.navbar-light .navbar-nav .nav-link {
+    color: #361186; /* Cambia el color de texto según tus preferencias (naranja) */
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+/* Estilo para el encabezado */
+.navbar-brand {
+    font-family: 'Archivo Black', sans-serif; /* Aplica la fuente personalizada */
+    font-size: 28px; /* Cambia el tamaño de fuente según tus preferencias */
+    font-weight: bold; /* Hace que el texto sea más grueso (negrita) */
+    color: transparent; /* Hace que el texto sea transparente para mostrar el fondo degradado */
+}
+
+.img-logo {
+    border-radius: 50%;
+    background-color: bisque;
+}
+
+.dropdown-menu {
+    background: url('img/fondoNav.png') center center fixed; /* Ruta de tu imagen de fondo */
+    font-family: 'Archivo Black', sans-serif; /* Aplica la fuente personalizada */
+    font-size: 15px; /* Cambia el tamaño de fuente según tus preferencias */
+    font-weight: bold; /* Hace que el texto sea más grueso (negrita) */
+    color: #ff5733; /* Cambia el color del texto del menú desplegable (naranja) */
+}
+
+nav {
+    height: 100px;
+}
+
+.carousel-caption{
+    color: #06030e; /* Cambia el color de texto según tus preferencias (naranja) */
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.carousel-item img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% */
+
+}
+
+h5,p{
+    color:#fff;
+}
+
+.visually-hidden{
+    color:#990303;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.card-ninos {
+background-color: #9ae363; /* Color de fondo */
+font-family: 'Lobster', cursive; /* Fuente llamativa */
+}
+
+.card-ninos .card-title {
+color: #034b1f; /* Color del título (morado) */
+font-size: 24px; /* Tamaño del título */
+}
+
+.card-ninos .card-text {
+font-size: 16px; /* Tamaño del texto */
+color: #000;
+}
+
+.card-ninos .card-footer {
+background-color: #FF5733; /* Color del pie de página */
+color: rgb(16, 1, 1); /* Color del texto del pie de página */
+font-size: 12px; /* Tamaño del texto del pie de página */
+}
+
+.card-ninas {
+background-color: #FFD2E7; /* Color de fondo */
+font-family: 'Pacifico', cursive; /* Fuente llamativa */
+}
+
+.card-ninas .card-title {
+color: #FF33A1; /* Color del título (rosa) */
+font-size: 24px; /* Tamaño del título */
+}
+
+.card-ninas .card-text {
+font-size: 16px; /* Tamaño del texto */
+color: #000;
+}
+
+.card-ninas .card-footer {
+background-color: #FF33A1; /* Color del pie de página */
+color: rgb(7, 4, 4); /* Color del texto del pie de página */
+font-size: 12px; /* Tamaño del texto del pie de página */
+}
+
+hr {
+height: 4px; /* Establece el grosor de 4 píxeles */
+background-color: #000; /* Cambia el color de la línea a negro */
+border: none; /* Elimina el borde predeterminado */
+margin: 10px 0; /* Agrega espacio superior e inferior de 10 píxeles */
+}
+
+body {
+    background-image: url('img/perspectiva-exterior-nadie-caja-vacia.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Para que la imagen no se repita */
+}
+/* El resto de tus estilos CSS aquí */
+</style>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="navbar-logo">
+            <a class="navbar-brand" href="#">
+                <img src="img/Logo2.png" width="80" height="80" alt="Diseños JET" class="img-logo">
+                Diseños <span class="text-grad">JET</span>
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="camisetasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Camisetas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="camisetasDropdown">
+                        <a class="dropdown-item" href="/camisetas-nino">Niños</a>
+                        <a class="dropdown-item" href="/camisetas-nina">Niñas</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="otrosProductosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" ariaexpanded="false">
+                        Otros Productos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="otrosProductosDropdown">
+                        <a class="dropdown-item" href="/busos">Busos</a>
+                        <a class="dropdown-item" href="/medias">Medias</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Mision.html">Misión y Visión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Mision.html">Quienes Somos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr size="10">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/Camisetas_1.png" class="d-block w-100" alt="Camisetas_1">
+                <br>
+                <br>
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/Camisetas_2.png" class="d-block w-100" alt="camisetas_2">
+                <br>
+                <br>
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/busos_2.png" class="d-block w-100" alt="Camisetas_3">
+                <br>
+                <br>
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </a>
+    </div>
+    <section style="margin: 10px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-3 card-ninos"> <!-- Agregué la clase card-ninos para el estilo de camisetas de niños -->
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="img_2/presentacion.png" class="img-fluid rounded-start" alt="Imagen 1">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Explora la Alegría de la Infancia con Nuestras Camisetas para Niños</h5>
+                                    <br>
+                                    <h6 class="card-text">Las camisetas de niños son más que prendas de vestir; son la expresión de la vitalidad y la alegría de la infancia. Nuestra colección de camisetas de niños combina comodidad y estilo para que los más pequeños puedan moverse con libertad mientras lucen diseños únicos. Desde divertidos estampados hasta colores vibrantes, nuestras camisetas están diseñadas pensando en la diversión y la energía de los niños. Deja que tus pequeños expresen su personalidad a través de nuestras camisetas llenas de motivos creativos y originales.</h6>
+                                    <br>
+                                    <a href="#" class="btn btn-primary">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card mb-3 card-ninas"> <!-- Agregué la clase card-ninas para el estilo de camisetas de niñas -->
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="img_2/presentacion_2.png" class="img-fluid rounded-start" alt="Imagen 2">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Elegancia y Estilo: Descubre Nuestras Camisetas para Niñas</h5>
+                                    <br>
+                                    <h6 class="card-text">Las camisetas de niñas son una combinación de elegancia y espíritu juvenil. Nuestra colección de camisetas para niñas ofrece una amplia gama de estilos y diseños que reflejan la dulzura y la diversidad de las niñas. Desde encantadores patrones florales hasta ilustraciones adorables, nuestras camisetas están diseñadas para resaltar la belleza y la individualidad de cada niña. Añade un toque de sofisticación y diversión al guardarropa de tu hija con nuestras camisetas de alta calidad.</h6>
+                                    <br>
+                                    <a href="#" class="btn btn-primary">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h5>Síguenos en redes sociales</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <a href="https://www.facebook.com/TuTienda" class="text-white" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="https://api.whatsapp.com/send?phone=TUNUMERODETELEFONO" class="text-white" target="_blank">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.instagram.com/TuInstagram" class="text-white" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <p>&copy; 2023 Tu Tienda de Camisetas</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Agrega las dependencias de JavaScript de Bootstrap al final del documento -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
